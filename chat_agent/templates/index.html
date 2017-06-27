@@ -22,14 +22,18 @@
           <div class="col-md-8 col-md-offset-2">
               <div class="col-md-4">
                   <ul class="list-group">
-                      <li class="list-group-item">Chatroom 1</li>
+						<h3>Chat rooms</h3>
+                      <li class="list-group-item">NPS Chat</li>
                       <li class="list-group-item">Chatroom 2</li>
-                      <li class="list-group-item">Chatroom 3</li>
-                      <li class="list-group-item">Chatroom 4</li>
                   </ul>
               </div>
               <div class="col-md-8">
-                  
+					<h3>Messages</h3>
+                  <ul class="list-group">
+					{% for post in posts %}
+                      <li class="list-group-item">{{ post|join:" " }}</li>
+					{% endfor %}
+                  </ul>
               </div>
             </div>
       </div>
